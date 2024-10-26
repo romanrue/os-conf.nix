@@ -1,0 +1,15 @@
+keys:
+  # Users
+  - &users:
+    - &romanrue 5ABCF97854E53D95846C1FCC5149DE6D4233F034
+  # Hosts
+  - &hosts:
+    - &test-vm age13t0due0zx8mdl0wl5yqr630gd5gtv0yz8fpdgqnj6le0rpyj54lsvrm5rt
+
+creation_rules:
+  - path_regex: hosts/common/secrets.ya?ml$
+    key_groups:
+      - age:
+          - *test-vm
+        pgp:
+          - *romanrue
